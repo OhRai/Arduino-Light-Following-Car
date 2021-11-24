@@ -1,7 +1,7 @@
 /* Light Following Car - Written by Raiyan Samin 2021.11.10
    This code allows the car to follow a light source*/
 
-// declare constants for all the pins and sets variables as either integers, floats, or booleans
+//declare constants for all the pins and sets variables as either integers, floats, or booleans
 const int LMotor_pin1 = 9;
 const int LMotor_pin2 = 10;
 const int RMotor_pin1 = 11;
@@ -82,6 +82,9 @@ void loop()
     {
       reverse();
       delay(10);
+      noTone(buzzerPin);
+      stopped();
+      delay(10);
     }
 
     //if the distance is greater than 50cm
@@ -91,6 +94,7 @@ void loop()
       if (photovalue1 > 250 && photovalue2 > 250)
       {
         forward();
+        noTone(buzzerPin);
       }
 
       //if the right photoresistor value is less than 250
