@@ -1,3 +1,6 @@
+
+final code:
+
 /* Light Following Car - Written by Raiyan Samin 2021.11.10
    This code allows the car to follow a light source*/
 
@@ -81,10 +84,9 @@ void loop()
     if (distance < 50)
     {
       reverse();
-      delay(10);
+      delay(100);
       noTone(buzzerPin);
       stopped();
-      delay(10);
     }
 
     //if the distance is greater than 50cm
